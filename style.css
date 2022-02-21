@@ -1,0 +1,211 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --ochrang:  #f9f9f9;
+    --toqrang:  #000;
+    --orta: #f8f8f8;  
+}
+.kech{
+     --orta: #494949;
+    --ochrang: #000;
+    --toqrang: #fff; 
+}
+body{
+    background-color: var(--ochrang);
+}
+body ul li{
+    list-style: none;
+    display: inline-block;
+}
+::-webkit-scrollbar{
+    width: 2px;
+}
+::-webkit-scrollbar-thumb{
+    background: var(--toqrang);
+}
+.solor{
+    width: 100%;
+    height: 10vh;
+    background: var(--ochrang);
+    display: flex;
+    justify-content: space-between;
+}
+.solor .soloname{
+    padding: 20px 50px;
+    font-family: bahnschrift;
+}
+.solor .soloname h1{
+    font-size: 45px;
+    font-weight: 100;
+    color: var(--toqrang);
+}
+.solor .soloname h4{
+    font-size: 14px;
+    color: rgb(38, 38, 38);
+    font-weight: 100;
+}
+.solor .sololink{
+    margin: 30px 50px;
+}
+.solor .sololink ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    font-family: bahnschrift;
+    font-weight: 200;
+    color: var(--toqrang);
+    cursor: pointer;
+    margin-right: 30px;
+}
+.solor .sololink ul li a:hover{
+    border-bottom: 1px solid 
+    var(--toqrang);
+}
+
+.infosolo{
+    width: 100%;
+    height: 90vh;
+    background: var(--ochrang);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+}
+.infosolo .bsolo{
+    width: 80%;
+    height: 570px;
+    overflow: hidden;
+    background-color: var(--orta);
+    border-radius: 20px;
+    transition: 0.4s ease-in-out;
+    box-shadow: rgba(66, 66, 66, 0.1) 0px 10px 50px;
+}
+.infosolo .sun .sunimg{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.infosolo .bsolo .sun{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+}
+.infosolo .bsolo .sun .suninfo{
+    margin-top: 90px;
+    color: var(--toqrang);
+}
+.solor .mode{
+    display: flex;
+    position: relative;
+    margin-top: 20px;
+}
+.solor .mode img{
+    position: absolute;
+    cursor: pointer;
+    animation: mode 2s ease-in-out infinite alternate;
+}
+@keyframes mode{
+    0%{
+        transform: translateX(-20px);
+    }
+    100%{
+        transform: translateX(20px);
+    }
+}
+.suninfo .sunname{
+    margin: -30px 78px;
+}
+.suninfo .sunname h1{
+    font-size: 39px;
+    font-weight: 100;
+    font-family: system-ui;
+    color: var(--toqrang);
+}
+.suninfo .sunname h4{
+    font-family: bahnschrift;
+    font-weight: 200;
+    padding-top: 3px;
+    color: var(--toqrang);
+}
+.suninfo .sunabout{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0px -20px;
+    padding-top: 42px;
+}
+.suninfo .sunabout .sunab1 h4{
+    font-family: system-ui;
+    font-weight: 400;
+    padding-top: 10px;
+}
+.suninfo .line{
+    width: 100%;
+    height: 1px;
+    background: rgb(206, 206, 206);
+    margin: 50px 0;
+}
+.suninfo .sunwiki{
+    width: 540px;
+}
+.suninfo .sunwiki p{
+    font-family: bahnschrift;
+    font-weight: 100;
+    cursor: pointer;
+    color: #9d9d9d;
+}
+.suninfo .sunwiki p:hover{
+    color: #777777;
+}
+.suninfo .plbut{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.suninfo .plbut button{
+    width: 140px;
+    padding: 12px;
+    border: 1px solid #f8f8f8;
+    font-family: system-ui;
+    cursor: pointer;
+    background-color: #dedfde57;
+    border-radius: 10px;
+    transition: 0.4s ease-in-out;
+}
+.suninfo .plbut button:hover{
+    width: 170px;
+    background-color: #d4d4d4;
+    transition: 0.4s ease-in-out;
+}
+
+ /* MEDIA RESPONSIVE */
+
+ @media (max-width:1380px){
+     .sun{
+         flex-direction: column;
+     }
+     .infosolo .bsolo{
+        height: 149vh;
+        margin-top: 498px;
+        display: flex;
+       align-items: center;
+       flex-direction: column;
+     }
+ }
+
+ @media(max-width:700px){
+     .infosolo .sunwiki{
+        width: 372px;
+        text-align: left;
+        margin: auto;
+        font-size: 13px;
+     }
+     .sun .sunimg img{
+         width: 400px;
+         height: 400px;
+     }
+ }
